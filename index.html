@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <title>Rock, Paper, Scissors | Frontend Mentor</title>
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+
+  <header class="score-box">
+    <h1 class="h-1">rock<br>paper<br>scissors</h1>
+    <div class="score-box__inner">
+      <h2 class="h-2">score</h2>
+      <p id="score" class="p-score">0</p>
+    </div>
+  </header>
+
+  <main id="starterPanel" class="buttons-box ">
+    <div>
+      <button class="paper btn startBtn" type="button"></button>
+      <button class="scissors btn startBtn" type="button"></button>
+    </div>
+    <button class="rock btn startBtn" type="button"></button>
+  </main>
+
+  <div id="gameOverPanel" class="hide-gameOverPanel">
+    <div>
+      <h2 class="h-3">you picked</h2>
+      <div id="youPicked" class="choice"></div>
+    </div>
+    <div id="gameOverBtnBox" class="hide-gameOverBtnBox">
+      <h2 id="winner">you win</h2>
+      <button id="playAgainBtn">play again</button>
+    </div>
+    <div>
+      <h2 class="h-3">the house picked</h2>
+      <div id="theHousePicked" class="choice"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <button id="rulesBtn" class="rules-btn">rules</button>
+  </footer>
+
+  <aside id="modal" class="show-modal hide-modal">
+    <div class="modal__box">
+      <h2>rules</h2>
+      <button id="closeModalBtn" aria-label="close rules box">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+    </div>
+  </aside>
+  
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
