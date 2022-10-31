@@ -20,9 +20,11 @@ const losingSound = new Audio("sounds/lose.wav");
 const drawSound = new Audio("sounds/draw.wav");
 const closeSound = new Audio("sounds/close.wav");
 
+if (localStorage.getItem("score") == null) {
+    localStorage.setItem("score", 0);
+}
 
-
-let scoredPoints = localStorage.getItem("score") ? localStorage.getItem("score") : 0;
+let scoredPoints = localStorage.getItem("score");
 score.textContent = localStorage.getItem("score")
 
 playButtons.forEach((playBtn) => {
