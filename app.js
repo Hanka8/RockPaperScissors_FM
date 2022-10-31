@@ -22,7 +22,7 @@ const closeSound = new Audio("sounds/close.wav");
 
 
 
-let scoredPoints = localStorage.getItem("score");
+let scoredPoints = localStorage.getItem("score") ? localStorage.getItem("score") : 0;
 score.textContent = localStorage.getItem("score")
 
 playButtons.forEach((playBtn) => {
