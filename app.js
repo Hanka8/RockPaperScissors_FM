@@ -1,3 +1,5 @@
+AOS.init();
+
 const displayedScore = document.getElementById("score");
 const playButtons = document.querySelectorAll(".startBtn");
 const starterPanel = document.getElementById("starterPanel");
@@ -18,7 +20,10 @@ const losingSound = new Audio("sounds/lose.wav");
 const drawSound = new Audio("sounds/draw.wav");
 const closeSound = new Audio("sounds/close.wav");
 
-let scoredPoints = 0;
+
+
+let scoredPoints = localStorage.getItem("score");
+score.textContent = localStorage.getItem("score")
 
 playButtons.forEach((playBtn) => {
     playBtn.addEventListener("click", (event) => {
@@ -76,8 +81,10 @@ function showWhoWon() {
         scoredPoints++;
         youPicked.classList.add("winning-choice");
         winningSound.play();
+        
     }
-    score.textContent = scoredPoints;
+    localStorage.setItem("score", scoredPoints);
+    score.textContent = localStorage.getItem("score");
     }, 700);
     
 };
@@ -85,15 +92,7 @@ function showWhoWon() {
 playAgainBtn.addEventListener("click", playAgain);
 
 function playAgain() {
-    starterPanel.classList.remove("hide-starterPanel");
-    gameOverPanel.classList.remove("show-gameOverPanel");
-    gameOverBtnBox.classList.remove("show-gameOverBtnBox");
-    gameOverBtnBox.classList.add("hide-gameOverBtnBox");
-    theHousePicked.classList.remove("btn", "paper", "rock", "scissors");
-    youPicked.classList.remove("btn", "paper", "rock", "scissors");
-    theHousePicked.classList.remove("winning-choice");
-    youPicked.classList.remove("winning-choice");
-    winner.textContent = "";
+    window.location.reload();
 }
 
 rulesBtn.addEventListener("click", () => {

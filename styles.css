@@ -420,6 +420,34 @@ body {
     transition: 0.2;
 }
 
+@media (min-width: 1600px) {
+    body {
+        width: 1600px;
+        margin: 0 auto;
+    }
+    .buttons-box {
+        width: 600px;
+        height: 580px;
+        margin-top: 5%;
+    }
+    .btn {
+        width: 180px;
+        height: 180px;
+    }
+    .rock {
+        flex-shrink: 0;
+        margin-top: 140px;
+    }
+    #youPicked {
+        width: 230px;
+        height: 230px;
+    }
+    #theHousePicked {
+        width: 230px;
+        height: 230px;
+    }
+}
+
 
 @media (max-width: 1000px) {
     .score-box {
