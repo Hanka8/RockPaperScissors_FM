@@ -297,6 +297,10 @@ body {
     color: red;
 }
 
+.show-gameOverBtnBox button:active {
+    scale: 0.9;
+}
+
 .winning-choice::before {
     content: "";
     position: absolute;
