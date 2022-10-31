@@ -20,7 +20,7 @@ const losingSound = new Audio("sounds/lose.wav");
 const drawSound = new Audio("sounds/draw.wav");
 const closeSound = new Audio("sounds/close.wav");
 
-if (localStorage.getItem("score") == null) {
+if (localStorage.getItem("score") == undefined) {
     localStorage.setItem("score", 0);
 }
 
